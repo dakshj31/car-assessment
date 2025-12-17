@@ -70,6 +70,10 @@ Banner dynamically displayed on homepage
 
 Responsive admin UI using Bootstrap
 
+Admin Login Credentials (For Testing)
+Email: admin@carsdekho.com
+Password: admin123
+
 ▶️ How to Run This Project Locally
 
 Install XAMPP
