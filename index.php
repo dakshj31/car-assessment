@@ -1,4 +1,8 @@
-<?php include 'db.php'; ?>
+<?php 
+session_start();
+include 'db.php'; 
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,11 +17,35 @@
   <div class="container">
     <a class="navbar-brand" href="#">CarsDekho</a>
     <ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-      <!-- <li class="nav-item"><a class="nav-link" href="#">Cars</a></li> -->
-      <li class="nav-item"><a class="nav-link" href="enquiry.php">Enquiry</a></li>
-      <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
-    </ul>
+  <li class="nav-item">
+    <a class="nav-link" href="index.php">Home</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="enquiry.php">Enquiry</a>
+  </li>
+
+  <?php if(isset($_SESSION['admin'])){ ?>
+    
+    <!-- If LOGGED IN -->
+    <li class="nav-item">
+      <a class="nav-link" href="admin/dashboard.php">Admin Panel</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link text-danger" href="admin/logout.php">Logout</a>
+    </li>
+
+  <?php } else { ?>
+    
+    <!-- If NOT logged in -->
+    <li class="nav-item">
+      <a class="nav-link" href="login.php">Login</a>
+    </li>
+
+  <?php } ?>
+</ul>
+
   </div>
 </nav>
 

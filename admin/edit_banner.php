@@ -1,5 +1,7 @@
 <?php
+
 include '../db.php';
+include 'header.php';
 
 $id = $_GET['id'];
 $banner = mysqli_fetch_assoc(mysqli_query($connection,"SELECT * FROM banners WHERE id='$id'"));

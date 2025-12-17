@@ -1,5 +1,6 @@
 <?php
 include '../db.php';
+include 'header.php';
 
 if(isset($_POST['submit'])){
     $name = $_POST['name'];

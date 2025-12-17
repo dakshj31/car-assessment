@@ -1,5 +1,6 @@
 <?php
 include '../db.php';
+include 'header.php';
 
 /* 1️⃣ Get car id */
 if (!isset($_GET['id'])) {

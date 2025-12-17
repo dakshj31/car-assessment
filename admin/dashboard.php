@@ -1,18 +1,9 @@
 <?php
+
 include '../db.php';
+include 'header.php';
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>Admin Dashboard</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
-<div class="container my-4">
-
-<h2 class="mb-4 text-center">Admin Dashboard</h2>
 
 <!-- STATS -->
 <div class="row text-center mb-4">
@@ -89,3 +80,6 @@ onclick="return confirm('Delete this car?')">Delete</a>
 </div>
 </body>
 </html>
+
+</div>
+<?php include 'footer.php';?>
